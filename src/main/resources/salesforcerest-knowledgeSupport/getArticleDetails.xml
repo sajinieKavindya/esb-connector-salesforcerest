@@ -29,43 +29,19 @@
             </then>
             <else/>
         </filter>
-        <filter source="boolean($func:categories)" regex="true">
+        <filter source="boolean($func:updateViewStat)" regex="true">
             <then>
-                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'categories=', $func:categories)"/>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'updateViewStat=', $func:updateViewStat)"/>
             </then>
             <else/>
         </filter>
-        <filter source="boolean($func:queryMethod)" regex="true">
+        <filter source="boolean($func:isUrlName)" regex="true">
             <then>
-                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'queryMethod=', $func:queryMethod)"/>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'isUrlName=', $func:isUrlName)"/>
             </then>
             <else/>
         </filter>
-        <filter source="boolean($func:sort)" regex="true">
-            <then>
-                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'sort=', $func:sort)"/>
-            </then>
-            <else/>
-        </filter>
-        <filter source="boolean($func:order)" regex="true">
-            <then>
-                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'order=', $func:order)"/>
-            </then>
-            <else/>
-        </filter>
-        <filter source="boolean($func:pageSize)" regex="true">
-            <then>
-                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'pageSize=', $func:pageSize)"/>
-            </then>
-            <else/>
-        </filter>
-        <filter source="boolean($func:pageNumber)" regex="true">
-            <then>
-                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'pageNumber=', $func:pageNumber)"/>
-            </then>
-            <else/>
-        </filter>
-        <filter source="boolean($ctx:queryParams)" regex="true">
+        <filter source="boolean($ctx:queryParams)" regex="false">
             <then>
                 <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion,'/support/knowledgeArticles')"/>
             </then>

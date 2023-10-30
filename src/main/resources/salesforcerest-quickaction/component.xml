@@ -22,9 +22,9 @@
             <file>sObjectAction.xml</file>
             <description>Return a specific object’s actions as well as global actions</description>
         </component>
-        <component name="getSpecificAction">
-            <file>getSpecificAction.xml</file>
-            <description>Return a specific action for a specific object</description>
+        <component name="getSpecificQuickAction">
+            <file>getSpecificQuickAction.xml</file>
+            <description>Return a specific action for an object</description>
         </component>
         <component name="quickActions">
             <file>quickActions.xml</file>

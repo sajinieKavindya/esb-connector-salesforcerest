@@ -35,12 +35,12 @@
         </component>
         <component name="returnHTTPHeadersForListOfAction">
             <file>returnHTTPHeadersForListOfAction.xml</file>
-            <description>Retrieving only the headers that are returned by the getListOfAction operation
-            </description>
+            <description>Retrieves only the headers that are returned by the getListOfAction operation</description>
         </component>
         <component name="returnHTTPHeadersForSpecificListOfAction">
             <file>returnHTTPHeadersForSpecificListOfAction.xml</file>
-            <description>Retrieving only the headers that are returned by the getSpecificListOfAction operation
+            <description>
+                Retrieves only the headers that are returned by the getSpecificListOfAction operation
             </description>
         </component>
     </subComponents>

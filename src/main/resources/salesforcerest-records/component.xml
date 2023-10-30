@@ -115,5 +115,34 @@
             <file>getObjectRecordCounts.xml</file>
             <description>Lists information about object record counts in your organization.</description>
         </component>
+        <component name="createUsingSObjectCollections">
+            <file>createUsingSObjectCollections.xml</file>
+            <description>Creates records using sObject collections. Can add up to 200 records</description>
+        </component>
+        <component name="deleteRecordsUsingSObjectCollections">
+            <file>deleteRecordsUsingSObjectCollections.xml</file>
+            <description>Deletes records using sObject collections. Can delete up to 200 records</description>
+        </component>
+        <component name="getRecordsUsingSObjectCollections">
+            <file>getRecordsUsingSObjectCollections.xml</file>
+            <description>Gets one or more records of the same object type using sObject collections.</description>
+        </component>
+        <component name="getRecordsWithARequestBodyUsingSObjectCollections">
+            <file>getRecordsWithARequestBodyUsingSObjectCollections.xml</file>
+            <description>
+                Gets one or more records of the same object type using sObject collections with a request body.
+            </description>
+        </component>
+        <component name="updateRecordsUsingSObjectCollections">
+            <file>updateRecordsUsingSObjectCollections.xml</file>
+            <description>Updates records using sObject collections. Can update up to 200 records</description>
+        </component>
+        <component name="upsertRecordsUsingSObjectCollections">
+            <file>upsertRecordsUsingSObjectCollections.xml</file>
+            <description>
+                Either creates or updates (upsert) up to 200 records based on an external ID field
+                using sObject collections
+            </description>
+        </component>
     </subComponents>
 </component>

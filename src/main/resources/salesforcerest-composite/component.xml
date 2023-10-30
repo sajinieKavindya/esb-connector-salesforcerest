@@ -26,5 +26,13 @@
             <file>sendMultipleRequestsUsingComposite.xml</file>
             <description>Executes a series of REST API requests in a single call.</description>
         </component>
+        <component name="compositeGraph">
+            <file>compositeGraph.xml</file>
+            <description>Submit composite graph operations.</description>
+        </component>
+        <component name="compositeBatch">
+            <file>compositeBatch.xml</file>
+            <description>Executes up to 25 subrequests in a single request.</description>
+        </component>
     </subComponents>
 </component>

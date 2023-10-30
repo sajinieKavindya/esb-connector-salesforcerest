@@ -28,14 +28,14 @@
         </component>
         <component name="getBlobData">
             <file>getBlobData.xml</file>
-            <description>Retrieving the specified blob field from an individual record and returns it as
-                binary data
+            <description>
+                Retrieves the specified blob field from an individual record and returns it as binary data
             </description>
         </component>
         <component name="getSObjectRichTextImage">
             <file>getSObjectRichTextImage.xml</file>
-            <description>Retrieving the specified image data from a specific rich text area field
-                in a given record
+            <description>
+                Retrieves the specified image data from a specific rich text area field in a given record
             </description>
         </component>
     </subComponents>
