@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright (c) 2023, WSO2 LLC (http://www.wso2.com) All Rights Reserved.
+
+   WSO2 LLC licenses this file to you under the Apache License,
+   Version 2.0 (the "License"); you may not use this file except
+   in compliance with the License.
+   You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied. See the License for the
+   specific language governing permissions and limitations
+   under the License.
+-->
+<template name="getArticleDetails" xmlns="http://ws.apache.org/ns/synapse">
+    <parameter name="articleId_or_articleUrlName" description="The Id or the URL name of the article."/>
+    <parameter name="channel" description="The value of the channel. Defaults to user’s context"/>
+    <parameter name="updateViewStat" description="A boolean value. If true, API updates the view count in the given channel as well as the total view count. Defaults to true."/>
+    <parameter name="isUrlName" description="A boolean value. If true, indicates that the last portion of the endpoint is a URL name instead of an article ID. Defaults to false."/>
+    <sequence>
+        <property name="queryParams" value=""/>
+        <filter source="boolean($func:channel)" regex="true">
+            <then>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'channel=', $func:channel)"/>
+            </then>
+            <else/>
+        </filter>
+        <filter source="boolean($func:categories)" regex="true">
+            <then>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'categories=', $func:categories)"/>
+            </then>
+            <else/>
+        </filter>
+        <filter source="boolean($func:queryMethod)" regex="true">
+            <then>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'queryMethod=', $func:queryMethod)"/>
+            </then>
+            <else/>
+        </filter>
+        <filter source="boolean($func:sort)" regex="true">
+            <then>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'sort=', $func:sort)"/>
+            </then>
+            <else/>
+        </filter>
+        <filter source="boolean($func:order)" regex="true">
+            <then>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'order=', $func:order)"/>
+            </then>
+            <else/>
+        </filter>
+        <filter source="boolean($func:pageSize)" regex="true">
+            <then>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'pageSize=', $func:pageSize)"/>
+            </then>
+            <else/>
+        </filter>
+        <filter source="boolean($func:pageNumber)" regex="true">
+            <then>
+                <property name="queryParams" expression="fn:concat($ctx:queryParams, '&amp;', 'pageNumber=', $func:pageNumber)"/>
+            </then>
+            <else/>
+        </filter>
+        <filter source="boolean($ctx:queryParams)" regex="true">
+            <then>
+                <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion,'/support/knowledgeArticles')"/>
+            </then>
+            <else>
+                <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion,'/support/knowledgeArticles?', fn:substring($ctx:queryParams, 2))"/>
+            </else>
+        </filter>
+        <property name="httpMethod" value="get"/>
+        <salesforcerest.callWithRetry/>
+    </sequence>
+</template>

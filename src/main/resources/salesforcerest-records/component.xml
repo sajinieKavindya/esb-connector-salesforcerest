@@ -78,5 +78,42 @@
                 with the Id using External ID.
             </description>
         </component>
+        <component name="createUsingExternalId">
+            <file>createUsingExternalId.xml</file>
+            <description>Creating a new record based on the field values included in the request body.
+                This resource does not require the use of an external ID field.
+            </description>
+        </component>
+        <component name="deleteUsingExternalId">
+            <file>deleteUsingExternalId.xml</file>
+            <description>Deleting a record based on the value of the specified external ID field.
+            </description>
+        </component>
+        <component name="createUsingSpecificSObjectQuickAction">
+            <file>createUsingSpecificSObjectQuickAction.xml</file>
+            <description>Creating a record via the specified quick action based on the field values included
+                in the request body
+            </description>
+        </component>
+        <component name="getRecordsUsingRelationships">
+            <file>getRecordsUsingRelationships.xml</file>
+            <description>Gets a record based on the specified object, record ID, and relationship field</description>
+        </component>
+        <component name="updateUsingRelationships">
+            <file>updateUsingRelationships.xml</file>
+            <description>Updates a parent record based on the specified object, record ID, and relationship
+                field name
+            </description>
+        </component>
+        <component name="deleteUsingRelationships">
+            <file>deleteUsingRelationships.xml</file>
+            <description>Deletes a parent record based on the specified object, record ID,
+                and relationship field name
+            </description>
+        </component>
+        <component name="getObjectRecordCounts">
+            <file>getObjectRecordCounts.xml</file>
+            <description>Lists information about object record counts in your organization.</description>
+        </component>
     </subComponents>
 </component>

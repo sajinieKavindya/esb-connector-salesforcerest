@@ -52,5 +52,11 @@
                 matching searches that other users have performed in Salesforce Knowledge
             </description>
         </component>
+        <component name="searchWithParametersInURI">
+            <file>searchWithParametersInURI.xml</file>
+            <description>Returns a list of suggested searches based on the user’s query string text
+                matching searches that other users have performed in Salesforce Knowledge
+            </description>
+        </component>
     </subComponents>
 </component>
