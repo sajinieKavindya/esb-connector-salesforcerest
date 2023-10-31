@@ -17,8 +17,17 @@
    under the License.
 -->
 <template name="listAppointmentCandidates" xmlns="http://ws.apache.org/ns/synapse">
-    <parameter name="OpportunityLineItemId" description="The Id of the opportunity line item."/>
+    <parameter name="fieldAndValue"/>
     <sequence>
+        <property name="uri.var.fieldAndValue" expression="$func:fieldAndValue"/>
+        <payloadFactory media-type="json">
+            <format>
+                $1
+            </format>
+            <args>
+                <arg expression="get-property('uri.var.fieldAndValue')"/>
+            </args>
+        </payloadFactory>
         <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion, '/scheduling/getAppointmentCandidates')"/>
         <property name="httpMethod" value="post"/>
         <salesforcerest.callWithRetry/>

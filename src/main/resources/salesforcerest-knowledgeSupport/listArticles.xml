@@ -80,7 +80,7 @@
                 <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion,'/support/knowledgeArticles')"/>
             </then>
             <else>
-                <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion,'/support/knowledgeArticles?', , fn:substring($ctx:queryParams, 2))"/>
+                <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion, '/support/knowledgeArticles?', fn:substring($ctx:queryParams, 2))"/>
             </else>
         </filter>
         <property name="httpMethod" value="get"/>

@@ -36,8 +36,9 @@
         </component>
         <component name="returnHeadersForUserPassword">
             <file>returnHeadersForUserPassword.xml</file>
-            <description>Returns only the headers that are returned by sending a GET request to the sObject
-                User Password resource
+            <description>
+                Returns only the headers that are returned by sending a GET request to the sObject
+                User Password resource.
             </description>
         </component>
         <component name="getSelfServiceUserPasswordExpirationStatus">

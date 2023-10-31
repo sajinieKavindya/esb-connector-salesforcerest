@@ -17,8 +17,6 @@
    under the License.
 -->
 <template name="getTranslatedValuesOfMultipleSurveyFieldsInOneOrMoreLanguages" xmlns="http://ws.apache.org/ns/synapse">
-    <parameter name="developerName" description="The developer name of the flow field."/>
-    <parameter name="language" description="The language into which the flow field was translated."/>
     <parameter name="fieldAndValue"/>
     <sequence>
         <property name="uri.var.fieldAndValue" expression="$func:fieldAndValue"/>

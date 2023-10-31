@@ -21,7 +21,7 @@
     <parameter name="externalIdField" description="Specific object ID to access the record."/>
     <parameter name="externalIdFieldValue" description="The value of the ExternalIdField"/>
     <sequence>
-        <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl,'/services/data/',$ctx:uri.var.apiVersion,'/sobjects/',$func:customObject,'/',$func:externalIdField,'/',$func:externalIdFieldValue)"/>
+        <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion, '/sobjects/', $func:customObject, '/', $func:externalIdField, '/', $func:externalIdFieldValue)"/>
         <property name="httpMethod" value="head"/>
         <salesforcerest.callWithRetry/>
     </sequence>

@@ -67,7 +67,8 @@
         </component>
         <component name="returnHeadersOfSObjectRowsByExternalId">
             <file>returnHeadersOfSObjectRowsByExternalId.xml</file>
-            <description>Return headers that are returned by sending a GET request to the sObject Rows
+            <description>
+                Return headers that are returned by sending a GET request to the sObject Rows
                 by External ID resource.
             </description>
         </component>

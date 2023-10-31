@@ -18,7 +18,7 @@
 -->
 <template name="returnHTTPHeadersForListOfAction" xmlns="http://ws.apache.org/ns/synapse">
     <sequence>
-        <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl,'/services/data/',$ctx:uri.var.apiVersion,'/actions')"/>
+        <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion, '/actions')"/>
         <property name="httpMethod" value="head"/>
         <salesforcerest.callWithRetry/>
     </sequence>

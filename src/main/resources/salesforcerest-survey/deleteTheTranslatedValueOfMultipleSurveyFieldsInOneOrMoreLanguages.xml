@@ -17,8 +17,6 @@
    under the License.
 -->
 <template name="deleteTheTranslatedValueOfMultipleSurveyFieldsInOneOrMoreLanguages" xmlns="http://ws.apache.org/ns/synapse">
-    <parameter name="developerName" description="The developer name of the flow field."/>
-    <parameter name="language" description="The language into which the flow field was translated."/>
     <parameter name="fieldAndValue"/>
     <sequence>
         <property name="uri.var.fieldAndValue" expression="$func:fieldAndValue"/>
@@ -31,7 +29,7 @@
             </args>
         </payloadFactory>
         <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion, '/localizedvalue/records/delete')"/>
-        <property name="httpMethod" value="delete"/>
+        <property name="httpMethod" value="post"/>
         <salesforcerest.callWithRetry/>
     </sequence>
 </template>

@@ -18,7 +18,7 @@
 -->
 <template name="returnHeadersForAppMenuMobileItems" xmlns="http://ws.apache.org/ns/synapse">
     <sequence>
-        <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl,'/services/data/',$ctx:uri.var.apiVersion,'/appMenu/Salesforce1/')"/>
+        <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion, '/appMenu/Salesforce1/')"/>
         <property name="httpMethod" value="head"/>
         <salesforcerest.callWithRetry/>
     </sequence>

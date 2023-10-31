@@ -101,8 +101,8 @@
         </component>
         <component name="updateUsingRelationships">
             <file>updateUsingRelationships.xml</file>
-            <description>Updates a parent record based on the specified object, record ID, and relationship
-                field name
+            <description>
+                Updates a parent record based on the specified object, record ID, and relationship field name
             </description>
         </component>
         <component name="deleteUsingRelationships">
@@ -135,7 +135,7 @@
         </component>
         <component name="updateRecordsUsingSObjectCollections">
             <file>updateRecordsUsingSObjectCollections.xml</file>
-            <description>Updates records using sObject collections. Can update up to 200 records</description>
+            <description>Updates records using sObject collections. Can update up to 200 records.</description>
         </component>
         <component name="upsertRecordsUsingSObjectCollections">
             <file>upsertRecordsUsingSObjectCollections.xml</file>

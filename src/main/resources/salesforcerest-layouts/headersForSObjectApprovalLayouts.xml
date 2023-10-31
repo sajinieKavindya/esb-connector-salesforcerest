@@ -19,7 +19,8 @@
 <template name="headersForSObjectApprovalLayouts" xmlns="http://ws.apache.org/ns/synapse">
     <parameter name="sObjectName" description="The type of sObject"/>
     <sequence>
-        <property name="uri.var.callEndpointUri" expression="fn:concat($ctx:uri.var.apiUrl,'/services/data/',$ctx:uri.var.apiVersion,'/sobjects/',$func:sObjectName,'/describe/approvalLayouts')"/>
+        <property name="uri.var.callEndpointUri"
+                  expression="fn:concat($ctx:uri.var.apiUrl, '/services/data/', $ctx:uri.var.apiVersion, '/sobjects/', $func:sObjectName, '/describe/approvalLayouts')"/>
         <property name="httpMethod" value="head"/>
         <salesforcerest.callWithRetry/>
     </sequence>
